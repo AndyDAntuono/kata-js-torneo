@@ -48,7 +48,7 @@ function chooseWeapons(fighters, weapons) {
     });
   }
 
-// Fase 2: Allenamento
+// Miestone 2: Allenamento
 function training(fighters) {
     return fighters.map(fighter => {
       const trainingMultiplier = Math.random() * 100 + 1; // Moltiplicatore casuale tra 1 e 100
@@ -58,9 +58,29 @@ function training(fighters) {
     });
   }
 
-// Fase 3: Qualificazione
+// Milestone 3: Qualificazione
 function qualification(fighters) {
     const qualified = fighters.filter(fighter => fighter.power >= 2000);
     logMessage(`Qualificati: ${qualified.map(f => f.name).join(", ")}`);
     return qualified;
+  }
+
+// Milestone 4: Combattimento
+function combat(fighters) {
+    if (fighters.length % 2 !== 0) {
+      fighters.push({ name: "Robot", power: 4000, weapon: "Laser" });
+      logMessage("Aggiunto combattente Robot per pareggiare i partecipanti.");
+    }
+  
+    const winners = [];
+    for (let i = 0; i < fighters.length; i += 2) {
+      const fighter1 = fighters[i];
+      const fighter2 = fighters[i + 1];
+  
+      logMessage(`${fighter1.name} (${fighter1.power}) VS ${fighter2.name} (${fighter2.power})`);
+      const winner = fighter1.power >= fighter2.power ? fighter1 : fighter2;
+      logMessage(`Vincitore: ${winner.name}`);
+      winners.push(winner);
+    }
+    return winners;
   }

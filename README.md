@@ -198,3 +198,19 @@ MILESTONE 3
 2 --- stampo i nomi dei qualificati con i metodo map() e join(", ").
 3 --- restituisco un array contenente solo i combattenti qualificati.
 4 --- lo scopo della funzione qualificatiom è quell di escludere dal torneo i combattenti che, dopo l’allenamento, non hanno raggiunto almeno 2000 di potenza.
+
+MILESTONE 4
+
+1 ----- se il numero di combattenti è dispari, aggiungiamo un "Robot" con potenza 4000.
+2 ----- imposto un ciclo for per accoppiare i combattenti due a due.
+3 ----- per ogni coppia stampo il combattimento e determino il vincitore confrontando la potenza.
+3.1 --- in caso di parità, decidio che il primo combattente che appare nel'elenco vince.
+3.1.1 - Con questa regola, ogni combattimento ha sempre un vincitore certo, anche in caso di parità. Così facendo evito di introdurre ulteriori fattori arbitrari.
+3.1.2 - Spiegazione più dettagliata del punto precedente:
+
+        const winner = fighter1.power >= fighter2.power ? fighter1 : fighter2;
+
+        Se fighter1.power > fighter2.power, fighter1 vince (potenza più alta).
+        Se fighter1.power === fighter2.power, anche in questo caso fighter1 vince, perché l’operatore >= dà priorità al primo.
+
+4 ----- restituisco un array con i vincitori.
