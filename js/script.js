@@ -47,3 +47,13 @@ function chooseWeapons(fighters, weapons) {
       return { ...fighter, weapon: chosenWeapon.name, power: fighter.power + chosenWeapon.power };
     });
   }
+
+// Fase 2: Allenamento
+function training(fighters) {
+    return fighters.map(fighter => {
+      const trainingMultiplier = Math.random() * 100 + 1; // Moltiplicatore casuale tra 1 e 100
+      const trainedPower = Math.floor(fighter.power * trainingMultiplier);
+      logMessage(`${fighter.name} ha terminato l'allenamento. Potenza incrementata a ${trainedPower}`);
+      return { ...fighter, power: trainedPower };
+    });
+  }

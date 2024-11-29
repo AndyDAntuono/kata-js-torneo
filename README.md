@@ -183,3 +183,11 @@ MILESTONE 1
 2.3 - Aggiorno la potenza del combattente aggiungendo il valore power dell’arma.
 3 --- Restituiamo un nuovo array di combattenti, ciascuno con un’arma e una potenza aggiornata.
 4 --- Ogni combattente sceglie un'arma casualmente, e l'arma scelta non sarà disponibile per gli altri.
+
+MILESTONE 2
+
+1 --- per ogni combattente genero un moltiplicatore casuale con Math.random() (valore tra 1 e 100).
+1.1 - moltiplico la potenza originale del combattente per questo moltiplicatore.
+1.2 - applico Math.floor() per arrotondare il risultato verso il basso.
+2 --- restituisco un nuovo array di combattenti con potenza aggiornata.
+3 --- Ogni combattente partecipa a un allenamento, durante il quale la sua potenza viene moltiplicata per un numero casuale compreso tra 1 e 100.
