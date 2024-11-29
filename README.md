@@ -214,3 +214,10 @@ MILESTONE 4
         Se fighter1.power === fighter2.power, anche in questo caso fighter1 vince, perché l’operatore >= dà priorità al primo.
 
 4 ----- restituisco un array con i vincitori.
+
+MILESTONE 5
+
+1 - creo una copia dell’array con l’operatore spread ([...fighters]).
+2 - uso il metodo sort() per ordinare i combattenti in ordine decrescente di potenza.
+3 - utilizzo il metodo slice(0, 3) per prendere i primi tre combattenti.
+4 - tampiamo i vincitori e restituiamo il podio.

@@ -84,3 +84,34 @@ function combat(fighters) {
     }
     return winners;
   }
+
+  // Milestone 5: Premiazione
+function awardCeremony(fighters) {
+    const podium = [...fighters].sort((a, b) => b.power - a.power).slice(0, 3);
+    logMessage("Podio dei vincitori:");
+    podium.forEach((fighter, index) => {
+      logMessage(`#${index + 1}: ${fighter.name} con potenza ${fighter.power}`);
+    });
+    return podium;
+  }
+
+
+  // Esecuzione del torneo
+logMessage("--- Inizio del Torneo Boolkaichi ---");
+
+let equippedFighters = chooseWeapons(fighters, weapons);
+logMessage("Dopo la scelta dell'arma:");
+
+let trainedFighters = training(equippedFighters);
+logMessage("Dopo l'allenamento:");
+
+let qualifiedFighters = qualification(trainedFighters);
+logMessage("Qualificati:");
+
+let winners = combat(qualifiedFighters);
+logMessage("Vincitori degli scontri:");
+
+awardCeremony(winners);
+
+logMessage("\n--- Bonus: Scontri fino a un vincitore unico ---");
+ultimateBattle(winners);
