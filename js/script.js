@@ -57,3 +57,10 @@ function training(fighters) {
       return { ...fighter, power: trainedPower };
     });
   }
+
+// Fase 3: Qualificazione
+function qualification(fighters) {
+    const qualified = fighters.filter(fighter => fighter.power >= 2000);
+    logMessage(`Qualificati: ${qualified.map(f => f.name).join(", ")}`);
+    return qualified;
+  }

@@ -177,12 +177,12 @@ FASE PRELIMINARE
 
 MILESTONE 1
 
-1 --- Creo una copia dell’array weapons usando l’operatore spread ([...weapons]) per non modificare l’array originale.
+1 --- creo una copia dell’array weapons usando l’operatore spread ([...weapons]) per non modificare l’array originale.
 2.1 - faccio in modo che ogni commbattente scelga un arma casualmente tramite il metodo Math.random()
-2.2 - Rimuovo l’arma dall’array delle armi disponibili usando il metodo splice().
-2.3 - Aggiorno la potenza del combattente aggiungendo il valore power dell’arma.
-3 --- Restituiamo un nuovo array di combattenti, ciascuno con un’arma e una potenza aggiornata.
-4 --- Ogni combattente sceglie un'arma casualmente, e l'arma scelta non sarà disponibile per gli altri.
+2.2 - rimuovo l’arma dall’array delle armi disponibili usando il metodo splice().
+2.3 - aggiorno la potenza del combattente aggiungendo il valore power dell’arma.
+3 --- restituisco un nuovo array di combattenti, ciascuno con un’arma e una potenza aggiornata.
+4 --- la funzione chooseWeapons permetto che ogni combattente sceglie un'arma casualmente, e l'arma scelta non sarà disponibile per gli altri.
 
 MILESTONE 2
 
@@ -190,4 +190,11 @@ MILESTONE 2
 1.1 - moltiplico la potenza originale del combattente per questo moltiplicatore.
 1.2 - applico Math.floor() per arrotondare il risultato verso il basso.
 2 --- restituisco un nuovo array di combattenti con potenza aggiornata.
-3 --- Ogni combattente partecipa a un allenamento, durante il quale la sua potenza viene moltiplicata per un numero casuale compreso tra 1 e 100.
+3 --- ogni combattente partecipa a un allenamento, durante il quale la sua potenza viene moltiplicata per un numero casuale compreso tra 1 e 100.
+
+MILESTONE 3
+
+1 --- creo la funzione qualification inn cui uso un metodo filter() per selezionare solo i combattenti con power >= 2000.
+2 --- stampo i nomi dei qualificati con i metodo map() e join(", ").
+3 --- restituisco un array contenente solo i combattenti qualificati.
+4 --- lo scopo della funzione qualificatiom è quell di escludere dal torneo i combattenti che, dopo l’allenamento, non hanno raggiunto almeno 2000 di potenza.
