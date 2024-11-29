@@ -220,4 +220,12 @@ MILESTONE 5
 1 - creo una copia dell’array con l’operatore spread ([...fighters]).
 2 - uso il metodo sort() per ordinare i combattenti in ordine decrescente di potenza.
 3 - utilizzo il metodo slice(0, 3) per prendere i primi tre combattenti.
-4 - tampiamo i vincitori e restituiamo il podio.
+4 - stampo i vincitori e restituisco il podio.
+
+BOUNUS
+
+1 - imposto un ciclo while che continua finché l’array dei combattenti ha più di un elemento.
+2 - in ogni iterazione, la funzione combat determina i vincitori del round.
+3 - stampo il campione assoluto quando resta un solo combattente.
+
+NB: se notate che è passato troppo poco tempo tra un push è l'altro è perché avevo eseguito già tutto l'esercizio in un altra repo (una sorta di brutta copia) e questa invece l'ho usata più che altro per presentare la soluzione dell'esercizio oltre che lo sviluppo dello stesso. 

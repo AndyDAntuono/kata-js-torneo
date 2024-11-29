@@ -96,6 +96,19 @@ function awardCeremony(fighters) {
   }
 
 
+// Bonus: Scontri fino a un vincitore unico
+function ultimateBattle(fighters) {
+    let round = 1;
+    while (fighters.length > 1) {
+      logMessage(`\n--- Round ${round} ---`);
+      fighters = combat(fighters);
+      round++;
+    }
+    logMessage(`\nIl campione assoluto è ${fighters[0].name} con una potenza di ${fighters[0].power}`);
+    return fighters[0];
+  }
+
+
   // Esecuzione del torneo
 logMessage("--- Inizio del Torneo Boolkaichi ---");
 
