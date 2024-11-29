@@ -36,3 +36,14 @@ function logMessage(message) {
     { name: "Spada Z", power: 235 },
     { name: "Orecchini Potara", power: 250 }
   ];
+
+  // Milestone 1: Scelta dell'arma
+function chooseWeapons(fighters, weapons) {
+    const availableWeapons = [...weapons]; // Copia delle armi originali
+    return fighters.map(fighter => {
+      const randomIndex = Math.floor(Math.random() * availableWeapons.length);
+      const chosenWeapon = availableWeapons.splice(randomIndex, 1)[0]; // Rimuove l'arma scelta
+      logMessage(`${fighter.name} ha scelto l'arma ${chosenWeapon.name}, incrementando la sua potenza di ${chosenWeapon.power}`);
+      return { ...fighter, weapon: chosenWeapon.name, power: fighter.power + chosenWeapon.power };
+    });
+  }

@@ -152,6 +152,20 @@ const weapons = [
   }
 ];
 
+**Obbiettivi**
+- ripasso delle strutture dati
+- allenare logica e manipolazione dati
+- sfruttare strumenti di debug
+- sfruttare la documentazione
+
+**Argomenti da ripassare**
+- Strutture dati
+- Cicli
+- Condizioni
+- Metodi degli array
+- Operatore spread
+- Math.random()
+
 
 /*SOLUZIONE PROPOSTA*/
 
@@ -160,3 +174,12 @@ FASE PRELIMINARE
 - creo i file index.html e script.js
 - nel file js creo una funzione per "stampare" lo sviluppo del torneo sia sulla cosnole che sulla pagine del browser
 - sempre nel file js aggiiungo gli array dei personaggi e delle armi
+
+MILESTONE 1
+
+1 --- Creo una copia dell’array weapons usando l’operatore spread ([...weapons]) per non modificare l’array originale.
+2.1 - faccio in modo che ogni commbattente scelga un arma casualmente tramite il metodo Math.random()
+2.2 - Rimuovo l’arma dall’array delle armi disponibili usando il metodo splice().
+2.3 - Aggiorno la potenza del combattente aggiungendo il valore power dell’arma.
+3 --- Restituiamo un nuovo array di combattenti, ciascuno con un’arma e una potenza aggiornata.
+4 --- Ogni combattente sceglie un'arma casualmente, e l'arma scelta non sarà disponibile per gli altri.
